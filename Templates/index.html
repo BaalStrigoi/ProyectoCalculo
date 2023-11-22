@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog de Apuntes de Cálculo</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #2c3e50;
+            color: white;
+        }
+        section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+        article {
+            flex: 0 1 calc(33.3333% - 20px);
+            box-sizing: border-box;
+            margin-bottom: 40px;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
+        }
+        article:hover {
+            transform: scale(1.05);
+        }
+        article img {
+            max-width: 100%;
+            height: auto;
+            border-bottom: 1px solid #ddd;
+        }
+        article div {
+            padding: 20px;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #2c3e50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Blog de Apuntes de Cálculo</h1>
+</header>
+
+<section>
+    <article>
+        
+        <div>
+            <h2>Apuntes de Cálculo I</h2>
+            <p>Descripción del contenido del apunte...</p>
+            <p>Autor: Nombre del estudiante</p>
+            
+            Para crear un blog ingresa: <a href="{% url 'blog:home'%}">Crear Blog</a>
+
+            
+        </div>
+    </article>
+
+    <!-- Puedes agregar más artículos aquí para más apuntes -->
+
+</section>
+
+<footer>
+    <p>&copy; 2023 Blog de Apuntes de Cálculo</p>
+</footer>
+
+</body>
+</html>
