@@ -1,0 +1,14 @@
+<!-- derivadas/templates/derivadas/index.html -->
+<h2>Calculadora de Derivadas</h2>
+
+<form method="post" action="{% url 'calcular_derivada' %}">
+    {% csrf_token %}
+    <label for="funcion">Ingrese la función:</label>
+    <input type="text" name="funcion" required>
+    <button type="submit">Calcular Derivada</button>
+</form>
+
+{% if funcion %}
+    <p>Función ingresada: {{ funcion }}</p>
+    <p>Derivada: {{ derivada }}</p>
+{% endif %}
